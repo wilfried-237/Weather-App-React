@@ -1,0 +1,70 @@
+body{
+    font-size: 1rem;
+}
+.WeatherApp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: hsl(180, 100%, 50%);
+    width: 500px;
+    padding: 0px 0px 20px 0px;
+    margin: auto;
+    border-radius: 15px;
+    margin-top: 50px;
+    box-shadow: 1px 1px 5px hsl(0, 0%, 75%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+
+}
+.search-box{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+}
+
+.search-box input{
+    font-size: 15px;
+    width: 65%;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 1px solid hsl(0, 0%, 50%);
+    outline: none;
+}
+
+.search-box button{
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+    padding: 0px 20px;
+}
+
+.display h2{
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 10px 0px 10px 0px;
+}
+.display span{
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-style: italic;
+}
+.display p{
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px 0px 0px 0px;
+}
+.display h4{
+    margin: 0px 0px 10px 0px;
+}
+.desc{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.desc span{
+        font-size: 1rem;
+        font-weight: bold;
+}
