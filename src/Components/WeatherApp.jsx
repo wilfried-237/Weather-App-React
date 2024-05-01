@@ -1,17 +1,19 @@
 import { useState } from "react";
 import "./index.css";
-import useFetch from './hooks/useFetch';
+import useFetch from './hooks/useFetch.jsx';
 import Display from "./Display.jsx";
 
 export default function WeatherApp() {
 
-  const [search, setSearch] = useState("")
+  const [search, setSearch] = useState("buea")
   const [searchTerm, setSearchTerm] = useState("")
   const [getData, loading, error] = useFetch(search)
 
   function handleClick(){
-    setSearch(searchTerm)
+    if(search != ""){
+      setSearch(searchTerm)
     setSearchTerm("")
+    }
   }
 
 
@@ -27,15 +29,15 @@ export default function WeatherApp() {
         <button onClick={()=> handleClick()}>Search</button>
       </div>
       {
-        loading?<div>Loadind Please Wait !</div> : null
+        loading && !error?<div className="loading">Loadind Please Wait...</div> : null
       }
       {
-        error && <div>An Error Occured! {error}</div>
+        error && <div className="loading">An Error Occured! {error}</div>
       }
       
       
       {
-        getData && <Display data={getData} />
+        getData && !loading && !error && <Display data={getData} />
       }
           
       
